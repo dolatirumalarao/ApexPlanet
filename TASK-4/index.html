@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Project Implementation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Full Project Implementation</h1>
+        <p>Portfolio | To-Do App | Product Filter</p>
+
+        <nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#todo">To-Do App</a>
+            <a href="#products">Product List</a>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="card">
+        <h2>1. Portfolio Section</h2>
+
+        <p>
+            Hello! I'm <b>Dola Tirumala Rao</b>, a web developer passionate
+            about building responsive and dynamic websites.
+        </p>
+
+        <table>
+            <tr>
+                <td><b>About:</b></td>
+                <td>Enthusiastic learner and coder.</td>
+            </tr>
+
+            <tr>
+                <td><b>Projects:</b></td>
+                <td>Portfolio website, To-Do App, Product Page.</td>
+            </tr>
+
+            <tr>
+                <td><b>Contact:</b></td>
+                <td>raodtirumala@gmail.com</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Todo Section -->
+    <section id="todo" class="card">
+        <h2>2. To-Do List</h2>
+
+        <div class="todo-box">
+            <input type="text" id="taskInput" placeholder="Add a task">
+            <button onclick="addTask()">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Product Section -->
+    <section id="products" class="card">
+        <h2>3. Product List with Filtering and Sorting</h2>
+
+        <div class="controls">
+            <label>Filter by Category:</label>
+
+            <select id="categoryFilter" onchange="displayProducts()">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+            </select>
+
+            <label>Sort by Price:</label>
+
+            <select id="sortPrice" onchange="displayProducts()">
+                <option value="none">None</option>
+                <option value="low">Low to High</option>
+                <option value="high">High to Low</option>
+            </select>
+        </div>
+
+        <div id="productContainer"></div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
